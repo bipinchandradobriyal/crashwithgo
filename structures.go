@@ -1,29 +1,28 @@
 package main
 
-import "fmt"
-
-type Address struct{
-	City		string
-	State		string
-	Country		string
-	HouseNo		string
-	LandMark	string
-}
-
-type User struct{
-	Name 		string
-	Age			int
-	DOB			int64
-	Address		Address
-}
+import (
+	"fmt"
+	"crashwithgo/structs"
+)
 
 
-func main()  {
+func main() {
 
-	var _ User
+	var _ structs.User
 
-	user := User{Name:"Bipin",Age:32, Address: Address{City: "", State: ""}, DOB:32423434322323}
-	user1 := &User{Name:"Bipin",Age:32, Address: Address{City: "", State: ""}, DOB:32423434322323}
+	user := structs.User{Name:"Bipin",Age:32, Address: structs.Address{City: "", State: ""}, DOB:32423434322323}
 
-	fmt.Println(user,user1)
+	// Order needs to maintain
+	// Without private field compile time error
+	// With private field runtime error "implicit assignment of unexported field 'password'"
+	user = structs.User{"Bipin",32, 32423434322323,structs.Address{City: "Delhi", State: "Delhi"},"password"}
+
+	// Assigning address. user1 is a *User type
+	user1 := &structs.User{Name:"Bipin",Age:32, Address: structs.Address{City: "NOIDA", State: "UP"}, DOB:32423434322323}
+
+	// Other way to declare
+	user2 := new(structs.User)
+	*user2 = structs.User{Name:"Bipin",Age:32, Address: structs.Address{City: "", State: ""}, DOB:32423434322323}
+
+	fmt.Println(user,"\n",*user1)
 }
