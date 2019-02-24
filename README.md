@@ -85,9 +85,9 @@ Routines:
 
 	Go routines are not thread
 
-	Go routines submits an unit of execution
+	Go routines submit an unit of execution
 
-	Syntaxes fo execution of go routine
+	Syntax for the execution of go routine
 
 	Will not cover sync/mutex here
 
@@ -95,10 +95,6 @@ Routines:
 Channels:
 
 	Go channels are used for the communication between go routines
-
-	ch := make(chan int)
-
-	var chVar chan int
 
 	Send / receive deadlocks with channels
 
