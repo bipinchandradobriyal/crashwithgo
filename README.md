@@ -14,12 +14,19 @@ Practical approach with GO
 
 Structures:
 	Used for the grouping of the arbitrary type named values(fields)
+
 	Private/Public members
+
 	Declaration syntaxes
+
 	If a field is omitted in this kind of literal, it is set to the zero value for its type
+
 	For efficiency, larger struct types are usually passed to or returned from functions indirectly	using a pointer
+
 	Structs are comparable if all the fields of the struct are comparable and can be compared using "=" or "!="
+
 	If struct is comparable then can be used as the key of the map
+
 	Structs can be embedded. The
 
 
