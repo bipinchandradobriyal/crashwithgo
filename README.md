@@ -38,7 +38,7 @@ Methods:
 	When a function is scoped to a type, or attached to the type, it is known as a method. The parameter attaches the function to the type of that parameter
 	The paramenter is also called receiver, which can be the pointer as well(Pass by value / Pass by refrence)
 	Nil is a valid receiver value. So it needs to be taken care as per the struct definition
-	Encapsulation
+	Encapsulation using methods
 
 
 Interfaces:
