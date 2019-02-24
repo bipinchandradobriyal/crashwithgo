@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"crashwithgo/structs"
+)
 
 type Employee struct{
 	Name 	string
@@ -21,4 +24,12 @@ func main(){
 	emp := Employee{Name:"Tom",Age:12}
 	fmt.Println(emp.getInfo())
 	fmt.Println(emp.getPtrInfo())
+
+
+	//
+	company := structs.Company{}
+	company.SetName("My Company Name")
+	company.SetAddress("Company address")
+	fmt.Println(company.ToString())
+
 }

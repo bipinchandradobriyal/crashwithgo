@@ -15,3 +15,12 @@ type User struct{
 	Address		Address
 	Password	string
 }
+
+// Struct embedding
+type Person struct{
+	Address	// This can be pointer
+	Name 		string
+	Age			int
+	DOB			int64
+	Password	string
+}
