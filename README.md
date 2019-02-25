@@ -96,6 +96,12 @@ Channels:
 
 	Go channels are used for the communication between go routines
 
+    Send / Receive wih channels // <- chan , chan <-
+
+    Channel blocks while receiving and writing. Any subsequent statement becomes unreachable
+
+    Direction specific channels (Can be of send or receive directed)
+
 	Send / receive deadlocks with channels
 
 	Channels can be of two types:
